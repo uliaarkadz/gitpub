@@ -10,9 +10,8 @@
 
     <% for( let i = 0; i < drinks.length; i++ ) { %> <%const drinkName =
     drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1)%>
-    <ul>
-      <li><%=drinkName%></li>
-    </ul>
+
+    <a href="/drinks/<%= i %>"><li><%=drinkName%></li></a>
     <% } %>
   </body>
   <style>

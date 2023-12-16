@@ -14,7 +14,7 @@ app.get("/drinks", (req, res) => {
 app.get("/drinks/:id", (req, res) => {
   const id = req.params.id;
   const drink = drinks[id];
-  res.send(drink);
+  res.render("show.ejs", { drink });
 });
 //************************* */
 app.listen(3000, () => {
