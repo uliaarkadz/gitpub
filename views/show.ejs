@@ -6,17 +6,37 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>At foo bar</h1>
-    <h2><%=drink.name%></h2>
-    <% const drinkimage = drink.image + ".png"%>
-    <img src="<%=drinkimage%>" />
-    <h3><%=drink.price%></h3>
-    <a href="/drinks">Back to Drinks Menu</a>
+    <div id="main">
+      <h1>At foo bar</h1>
+      <h2><%=drink.name%></h2>
+      <% const drinkimage = drink.image + ".png"%>
+      <div id="coctail"><img src="<%=drinkimage%>" /></div>
+      <h3><%=drink.price%></h3>
+      <div id="home"><a href="/drinks">Back to Drinks Menu</a></div>
+    </div>
   </body>
   <style>
     body {
       background-color: steelblue;
-      color: blanchedalmond;
+    }
+    h1 {
+      color: blue;
+    }
+    h2,
+    h3 {
+      color: rgb(208, 23, 137);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    #main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #coctail {
+      width: 30vw;
     }
   </style>
 </html>

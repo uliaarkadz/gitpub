@@ -6,18 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Welcome to gitPub</h1>
+    <div id="main">
+      <h1>Welcome to gitPub</h1>
 
-    <% for( let i = 0; i < drinks.length; i++ ) { %> <%const drinkName =
-    drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1)%>
+      <% for( let i = 0; i < drinks.length; i++ ) { %> <%const drinkName =
+      drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1)%>
 
-    <a href="/drinks/<%= i %>"><li><%=drinkName%></li></a>
-    <% } %>
+      <a href="/drinks/<%= i %>"><li><%=drinkName%></li></a>
+      <% } %>
+    </div>
   </body>
   <style>
     body {
       background-color: steelblue;
       color: blanchedalmond;
+    }
+
+    h1 {
+      color: rgb(105, 86, 199);
+      border-bottom: 3px double white;
+      text-align: center;
+    }
+    li {
+      padding: 8px;
+    }
+    #main {
+      border: 3px solid white;
+      width: 40%;
     }
   </style>
 </html>
