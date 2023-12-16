@@ -11,6 +11,11 @@ app.get("/drinks", (req, res) => {
   res.render("index.ejs", { drinks });
 });
 
+app.get("/drinks/:id", (req, res) => {
+  const id = req.params.id;
+  const drink = drinks[id];
+  res.send(drink);
+});
 //************************* */
 app.listen(3000, () => {
   console.log("server is running");
