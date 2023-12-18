@@ -8,11 +8,19 @@
   <body>
     <div id="main">
       <h1>Welcome to gitPub</h1>
-
+      <h2>Drinks Menu</h2>
       <% for( let i = 0; i < drinks.length; i++ ) { %> <%const drinkName =
       drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1)%>
 
       <a href="/drinks/<%= i %>"><li><%=drinkName%></li></a>
+
+      <% } %>
+      <h2>Food Menu</h2>
+      <% for( let i = 0; i < food.length; i++ ) { %> <%const foodName =
+      food[i].name.charAt(0).toUpperCase() + food[i].name.slice(1)%>
+
+      <a href="/food/<%= i %>"><li><%=foodName%></li></a>
+
       <% } %>
     </div>
   </body>
